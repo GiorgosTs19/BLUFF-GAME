@@ -172,7 +172,7 @@ export default function GameWaitingRoom(props) {
                                     }
                                     <Row>
                                         {Room.Player && User.id === Room.Player.id &&
-                                            <Col xs={12} lg={10}>
+                                            <Col xs={12}>
                                                 <Link href={route('Ready')} method={'post'} data={{RoomId:Room.id}} as={'button'}
                                                       className="btn btn-outline-success mt-4" type="button" disabled={!canClickReady || Room.PlayerReady}>
                                                     Ready

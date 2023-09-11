@@ -30,10 +30,10 @@ export function BeforeYouPlay() {
                                         </p>
                                         <p>
                                             <strong>
-                                                When using your mobile, be advised that the responsiveness of the game to different devices
-                                                is under heavy development ( It should be fine for most devices though ).
-                                                <br></br>
-                                                <br></br>
+                                                {/*When using your mobile, be advised that the responsiveness of the game to different devices*/}
+                                                {/*is under heavy development ( It should be fine for most devices though ).*/}
+                                                {/*<br></br>*/}
+                                                {/*<br></br>*/}
                                                 Always use landscape mode when playing on mobiles.
                                                 <br></br>
                                                 <br></br>

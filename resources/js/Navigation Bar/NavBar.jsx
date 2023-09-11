@@ -18,10 +18,10 @@ export function NavBar({Guest,InGame,GameId}) {
                         Admin Panel
                     </Link>
                 }
-                <span className={'p-1 ms-0 ms-xl-5'}>
-                    <img src={'Images/greece.png'} style={{height:40,width:40,opacity:'40%'}} alt={'Greek'}></img>
-                    <h6 style={{opacity:'50%'}}>( Coming Soon )</h6>
-                </span>
+                {/*<span className={'p-1 ms-0 ms-xl-5'}>*/}
+                {/*    <img src={'Images/greece.png'} style={{height:40,width:40,opacity:'40%'}} alt={'Greek'}></img>*/}
+                {/*    <h6 style={{opacity:'50%'}}>( Coming Soon )</h6>*/}
+                {/*</span>*/}
                 <PersonalInfo></PersonalInfo>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target=".collapse" aria-controls="navbarSupportedContent"
