@@ -38,8 +38,8 @@ export function InviteFriends({}) {
                 <p className={'text-info ' + (copied && 'mt-2')}>
                     You can share this link with your friends to invite them to play the game. ( Click on it to copy it )
                 </p>
-                <h5>( Coming Soon )</h5>
-                <h6>There are going to be perks for both of you when you invite a new player to the game.</h6>
+                {/*<h5>( Coming Soon )</h5>*/}
+                {/*<h6>There are going to be perks for both of you when you invite a new player to the game.</h6>*/}
             </div>}
         </div>
     )

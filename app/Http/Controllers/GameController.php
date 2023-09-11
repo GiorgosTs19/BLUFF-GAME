@@ -44,7 +44,7 @@ class GameController extends Controller {
         $Room->GameId = $Game->id;
         $Room->save();
 
-        return Inertia::render('Game/GameWaitingRoom',['Room' => new RoomResource($Room)]);
+        return Inertia::render('Game/WaitingRoom/GameWaitingRoom',['Room' => new RoomResource($Room)]);
     }
 
     protected function otherPlayer($players,$last) {

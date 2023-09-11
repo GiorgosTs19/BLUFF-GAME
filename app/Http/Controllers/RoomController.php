@@ -146,7 +146,7 @@ class RoomController extends Controller {
                 ->orderByDesc('created_at')->first());
             return Redirect::route('home')->with(['Kicked'=>$Was_Kicked]);
         }
-        return Inertia::render('Game/GameWaitingRoom',['Room'=>new RoomResource($Room)]);
+        return Inertia::render('Game/WaitingRoom/GameWaitingRoom',['Room'=>new RoomResource($Room)]);
     }
 
     public function setReady(Request $request, Room $room) {
@@ -179,7 +179,7 @@ class RoomController extends Controller {
             $Room->PlayerReady = true;
             $Room->save();
         }
-        return Inertia::render('Game/GameWaitingRoom',['Room'=>new RoomResource($Room)]);
+        return Inertia::render('Game/WaitingRoom/GameWaitingRoom',['Room'=>new RoomResource($Room)]);
     }
 
     public function Join(Request $request,$By_Link = false,$Link_Input=[]) {
@@ -199,7 +199,7 @@ class RoomController extends Controller {
         }
         $Room->PlayerId = $request->user()->id;
         $Room->save();
-        return Inertia::render('Game/GameWaitingRoom',['Room'=>new RoomResource($Room)]);
+        return Inertia::render('Game/WaitingRoom/GameWaitingRoom',['Room'=>new RoomResource($Room)]);
     }
 
     public function Leave(Request $request) {
@@ -254,7 +254,7 @@ class RoomController extends Controller {
         if(is_null($Room))
             return Redirect::route('home');
         else
-            return Inertia::render('Game/GameWaitingRoom',['Room'=>new RoomResource($Room)]);
+            return Inertia::render('Game/WaitingRoom/GameWaitingRoom',['Room'=>new RoomResource($Room)]);
     }
 
     public function BelongsInGame($Room,$User) {

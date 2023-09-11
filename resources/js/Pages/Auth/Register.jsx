@@ -5,7 +5,7 @@ import {FormCheck} from "react-bootstrap";
 
 export default function Register({refUser}) {
     const [iEE, setIEE] = useState(false),
-        [showingPasswordStored,setShowingPasswordStored] = useState(false),
+        // [showingPasswordStored,setShowingPasswordStored] = useState(false),
         { data, setData, post, processing, errors, reset } = useForm({
         name: '',
         email: '',
@@ -89,11 +89,11 @@ export default function Register({refUser}) {
                     {errors.password && <p className={'text-danger'}>{errors.password}</p>}
                     {errors.password_confirmation && <p className={'text-danger'}>{errors.password_confirmation}</p>}
                     <button className='btn btn-outline-success border-3'>Sign Up</button>
-                    <span className={'text-info text-center '} onClick={()=>{setShowingPasswordStored(!showingPasswordStored)}}>
-                    <h6 className={'mt-3 px-2'}>How is my password stored?</h6>
-                    <h3>&#9432;</h3>
-                </span>
-                    {showingPasswordStored && <p className={'text-danger text-center'}>Your passwords are hashed using Bcrypt hashing function.</p>}
+                {/*    <span className={'text-info text-center '} onClick={()=>{setShowingPasswordStored(!showingPasswordStored)}}>*/}
+                {/*    <h6 className={'mt-3 px-2'}>How is my password stored?</h6>*/}
+                {/*    <h3>&#9432;</h3>*/}
+                {/*</span>*/}
+                {/*    {showingPasswordStored && <p className={'text-danger text-center'}>Your passwords are hashed using Bcrypt hashing function.</p>}*/}
                 </form>
             </div>
     );

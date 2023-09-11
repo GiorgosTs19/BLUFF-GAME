@@ -7,10 +7,10 @@ import {UserContext} from "../Contexts/UserContext";
 import {BeforeYouPlay} from "../Profile/BeforeYouPlay";
 import {BugSubmissionForm} from "../Bugs/BugSubmissionForm";
 import {ErrorContext} from "../Contexts/ErrorContext";
-import {InviteFriends} from "../Modals/InviteFriends";
 import {GotKickedModal} from "../Modals/GotKickedModal";
 import {GameRules} from "../Modals/GameRules";
 import {InviteLinkContext} from "../Contexts/InviteLinkContext";
+import {Col, Row} from "react-bootstrap";
 
 export default function Dashboard(props) {
     const [roomDoesntExistErrorVisible,setRoomDoesntExistErrorVisible] = useState(!!props.errors.Room_Doesnt_Exist),
@@ -25,8 +25,8 @@ export default function Dashboard(props) {
         return ()=>clearTimeout(AlertVisible);
     },[props.errors]);
     useEffect(()=>  {
-        document.title = 'Home';
-    });
+        document.title = 'Bluff-Game';
+    },[]);
     return (
         <InviteLinkContext.Provider value={props.InviteLink}>
             <ErrorContext.Provider value={props.errors}>
@@ -47,8 +47,8 @@ export default function Dashboard(props) {
                                         </div>
                                     </div>
                                     <GameRules></GameRules>
-                                    <div className={'row'}>
-                                        <div className={'col'}>
+                                    <Row>
+                                        <Col>
                                             {/*<UserContext.Provider value={props.auth.user}>*/}
                                             <Rooms rooms={RoomsList}>
                                                 <Link href={route('home')} as={'button'}
@@ -58,8 +58,8 @@ export default function Dashboard(props) {
                                                 </Link>
                                             </Rooms>
                                             {/*</UserContext.Provider>*/}
-                                        </div>
-                                    </div>
+                                        </Col>
+                                    </Row>
                                 </div>
                             </div>
                             <div className={'row align-self-end text-center'}>

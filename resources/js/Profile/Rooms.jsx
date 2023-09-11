@@ -2,6 +2,7 @@ import {Room} from "../Game Components/Room";
 import {CreateNewRoom} from "../Modals/CreateNewRoom";
 import {JoinByLink} from "../Modals/JoinByLink";
 import {useState} from "react";
+import {Card} from "react-bootstrap";
 
 
 export function Rooms({rooms,children}) {
@@ -10,12 +11,12 @@ export function Rooms({rooms,children}) {
     handleCreateClick = () => setShowingCreate(!showingCreate),
     handleJoinClick = () => setShowingJoin(!showingJoin);
     return (
-        <div className='card border-0 p-1 shadow h-100 gx-0' style={{background:"#AFBEC1"}}>
+        <Card className='border-0 p-1 shadow h-100 gx-0' style={{background:"#AFBEC1"}}>
             <div className='card-title p-1 text-center' hidden={(showingCreate || showingJoin)}>
                 <h2>Rooms</h2>
                 {children}
             </div>
-            <div className='card-body p-2'>
+            <Card.Body className='p-2'>
                 <div className="row gx-0 justify-content-center">
                     <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="false" hidden={showingCreate || showingJoin}>
                         <div className="carousel-inner justify-items-center">
@@ -62,7 +63,7 @@ export function Rooms({rooms,children}) {
                         {!showingCreate &&<JoinByLink handleClick={handleJoinClick}></JoinByLink>}
                     </div>
                 </div>
-            </div>
-        </div>
+            </Card.Body>
+        </Card>
     )
 }
