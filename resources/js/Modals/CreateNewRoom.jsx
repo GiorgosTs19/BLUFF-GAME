@@ -58,8 +58,8 @@ export function CreateNewRoom({handleClick}) {
             </button>}
             <div hidden={!show} className={'text-center'}>
                 <h3 className="offcanvas-title" id="offcanvasExampleLabel">Create New Room</h3>
-                <form onSubmit={submit} className='p-4'>
-                    <div className="row justify-content-center">
+                {/*<form onSubmit={submit} className='p-4'>*/}
+                    <div className="row justify-content-center bg-transparent">
                         <FormFloatingTextInput
                             type='text'
                             name='Name'
@@ -117,7 +117,7 @@ export function CreateNewRoom({handleClick}) {
                             </p>
                         </>}
                     </div>
-                </form>
+                {/*</form>*/}
                 { show && <button className="btn btn-outline-danger w-auto text-center mx-1" type="button" onClick={handleShow}>
                     Back
                 </button>}
